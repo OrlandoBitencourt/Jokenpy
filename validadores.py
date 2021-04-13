@@ -4,3 +4,8 @@ def valida_carta_escolhida(carta_escolhida):
     else:
         print("\nDigite uma opção válida!\n")
         return False
+
+def valida_rodada(rodada):
+    rodada += 1
+    return rodada
+
