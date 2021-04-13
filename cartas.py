@@ -1,5 +1,3 @@
-
-
 class Cartas:
 
     nome: ""
@@ -15,5 +13,3 @@ class Cartas:
     def printa_carta_escolhida(self, nome_jogador, valor_carta):
         if valor_carta == self.valor:
             print(f"{nome_jogador} escolheu: {self.valor} - {self.nome}")
-
-

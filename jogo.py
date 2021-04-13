@@ -1,3 +1,5 @@
+from random import randint
+
 class Jogo:
 
     def verificar_vencedor(self, valor_carta_jogador, valor_carta_computador):
@@ -11,3 +13,7 @@ class Jogo:
         else:
             print("\nVocê venceu!\n")
             return 1
+
+    def gera_carta_automaticamente(self):
+        carta = randint(1, 3)
+        return carta

@@ -1,7 +1,7 @@
 import cartas
 import jogadores
 import jogo
-from random import randint
+
 
 cartas = [cartas.Cartas("Pedra",1), cartas.Cartas("Papel",2), cartas.Cartas("Tesoura",3)]
 
@@ -26,7 +26,8 @@ while True:
     for carta in cartas:
         carta.printa_carta_escolhida(jogador.nome, carta_escolhida)
 
-    valor_carta_computador = randint(1, 3)
+    valor_carta_computador = jogo_iniciado.gera_carta_automaticamente()
+
     for carta in cartas:
         carta.printa_carta_escolhida(computador.nome, valor_carta_computador)
 
