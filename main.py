@@ -11,11 +11,12 @@ print("\nJokenpy\n")
 jogador = jogadores.Jogadores(input("Informe seu nome: "))
 
 while True:
+    jogo_iniciado = jogo.Jogo()
 
     print(f"Você recebeu 3 cartas.\n {carta_pedra}\n {carta_papel}\n {carta_tesoura}\n")
 
     carta_escolhida = jogador.escolher_carta()
 
-    rodada_atual = jogo.Jogo()
+    jogo_iniciado.printa_carta_escolhida(jogador.nome, carta_escolhida)
 
-    rodada = rodada_atual.verificar_vencedor(carta_escolhida)
+    rodada = jogo_iniciado.verificar_vencedor(carta_escolhida)

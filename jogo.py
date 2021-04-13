@@ -6,19 +6,22 @@ class Jogo:
 
         valor_carta_ai = randint(0, 3)
 
-        if valor_carta_ai == 1:
-            print("Computador escolheu: 1 - Pedra\n")
-        elif valor_carta_ai == 2:
-            print("Computador escolheu: 2 - Papel\n")
-        elif valor_carta_ai == 3:
-            print("Computador escolheu: 3 - Tesoura\n")
+        self.printa_carta_escolhida("Computador", valor_carta_ai)
 
         if (valor_carta_jogador == 1 and valor_carta_ai == 1) or (valor_carta_jogador == 2 and valor_carta_ai == 2) or (valor_carta_jogador == 3 and valor_carta_ai == 3):
-            print("Empate!\n")
+            print("\nEmpate!\n")
             return 3
         elif (valor_carta_jogador == 1 and valor_carta_ai == 2) or (valor_carta_jogador == 2 and valor_carta_ai == 3) or (valor_carta_jogador == 3 and valor_carta_ai == 1):
-            print("Você perdeu!\n")
+            print("\nVocê perdeu!\n")
             return 2
         else:
-            print("Você venceu!\n")
+            print("\nVocê venceu!\n")
             return 1
+
+    def printa_carta_escolhida(self, nome, carta):
+        if carta == 1:
+            print(f"{nome} escolheu: 1 - Pedra")
+        elif carta == 2:
+            print(f"{nome} escolheu: 2 - Papel")
+        elif carta == 3:
+            print(f"{nome} escolheu: 3 - Tesoura")
