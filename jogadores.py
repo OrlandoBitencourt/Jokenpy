@@ -6,8 +6,6 @@ class Jogadores:
 
     def __init__(self, nome):
         self.nome = nome
-        print(f"\nSeja bem-vindo: {self.nome}!\n")
-
 
     def escolher_carta(self):
         carta_escolhida = 0
