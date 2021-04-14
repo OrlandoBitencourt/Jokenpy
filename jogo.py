@@ -1,5 +1,6 @@
 from random import randint
 
+
 class Jogo:
 
     def verificar_vencedor_rodada(self, valor_carta_jogador, valor_carta_computador):
@@ -22,10 +23,24 @@ class Jogo:
         return carta
 
 
-    def verifica_vencedor_jogo(self, contador_jogador, nome_jogador):
+    def verifica_vencedor_jogo(self, contador_jogador, nome_jogador, contador_oponente, nome_oponente, round):
+
+        print(f"{nome_jogador}: {contador_jogador} x {nome_oponente}: {contador_oponente}\n")
 
         if contador_jogador == 2:
-            print(f"{nome_jogador.nome} Venceu o jogo.")
+            print(f"{nome_jogador} Venceu o jogo.\n")
             return True
-
+        elif contador_oponente == 2:
+            print(f"{nome_oponente} Venceu o jogo.\n")
+            return True
+        elif round == 3:
+            if contador_jogador > contador_oponente:
+                print(f"{nome_jogador} Venceu o jogo.\n")
+                return True
+            elif contador_jogador < contador_oponente:
+                print(f"{nome_oponente} Venceu o jogo.\n")
+                return True
+            else:
+                print(f"{contador_jogador} a {contador_oponente}. Jogo empatou!\n")
+                return True
         return False
