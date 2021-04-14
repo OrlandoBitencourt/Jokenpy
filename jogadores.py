@@ -2,7 +2,6 @@ import validadores
 
 
 class Jogadores:
-
     nome = ""
 
     def __init__(self, nome):
@@ -19,10 +18,7 @@ class Jogadores:
 
             validar_campo = validadores.valida_carta_escolhida(carta_escolhida)
 
-            if validar_campo == True:
+            if validar_campo:
                 break
 
         return carta_escolhida
-
-
-

@@ -8,7 +8,7 @@ class Cartas:
         self.valor = valor
 
     def __str__(self):
-        return (f"{self.valor} - {self.nome}")
+        return f"{self.valor} - {self.nome}"
 
-    def printar_carta_escolhida(self, nome_jogador, valor_carta):
+    def printar_carta_escolhida(self, nome_jogador):
         print(f"{nome_jogador} escolheu: {self.valor} - {self.nome}")
