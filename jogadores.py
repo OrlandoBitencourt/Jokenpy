@@ -1,5 +1,6 @@
 import validadores
 
+
 class Jogadores:
 
     nome = ""
